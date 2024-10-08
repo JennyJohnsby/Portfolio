@@ -2,6 +2,7 @@
   --backround-color: #8cb3df;
   --font-color: #0b1a2f;
   --second-font-color: #652922;
+  --color-button: #c8e1ff;
 }
 body {
   background-color: var(--backround-color);
@@ -63,4 +64,46 @@ main {
 .hello-world h1 {
   margin: 0;
   font-weight: 300;
+}
+.work {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.work-card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  background-color: #9fccff;
+  max-width: 1200px;
+  border-radius: 1rem;
+}
+.work-card img {
+  width: 100%;
+  height: auto;
+  max-width: 1440px;
+}
+.work-card h3 {
+  font-weight: 300;
+}
+.work-card p {
+  font-weight: 200;
+}
+.link-button {
+  background-color: var(--color-button);
+  border-radius: 1rem;
+  font-weight: 500;
+  padding: 12px 8px;
+  color: var(--font-color);
+  text-decoration: none;
+}
+.link-button:hover {
+  background-color: var(--backround-color);
+  text-decoration: underline;
+}
+.contact{
+    background-color: var(--font-color);
+    color: var(--backround-color);
+    padding: 2rem;
 }
