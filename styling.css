@@ -19,15 +19,12 @@ main {
 .header-container {
   position: relative;
   text-align: center;
-  margin: 0;
-  padding: 0;
 }
 .header-img {
   width: 100%;
   height: 300px;
   object-fit: cover;
   display: block;
-  margin: 0;
 }
 .centered {
   position: absolute;
@@ -61,49 +58,67 @@ main {
   color: var(--backround-color);
   padding: 2rem;
 }
-.hello-world h1 {
-  margin: 0;
-  font-weight: 300;
+.work-intro {
+  padding: 2rem;
 }
-.work {
+.accordion {
+  padding: 2rem;
+  align-self: center;
+}
+.accordion .content img{
+    max-width: 900px;
+    height:auto;
+}
+.accordion .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+  }
+.accordion li {
+  list-style: none;
+  margin: 20px;
+  padding: 10px;
+  background-color: var(--color-button);
+}
+.accordion li label {
   display: flex;
-  padding: 2rem;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  padding: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
 }
-.work-card {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  background-color: #9fccff;
-  max-width: 1200px;
-  border-radius: 1rem;
+input[type="radio"] {
+  display: none;
 }
-.work-card img {
-  width: 100%;
-  height: auto;
-  max-width: 1440px;
+
+input[type="radio"]:checked + label + .content {
+    max-height: none;
+    padding: 10px 10px 20px; 
 }
-.work-card h3 {
-  font-weight: 300;
+label::before {
+  content: "»";
 }
-.work-card p {
-  font-weight: 200;
+input[type="radio"]:checked + label::before {
+  content: "«";
 }
 .link-button {
-  background-color: var(--color-button);
-  border-radius: 1rem;
-  font-weight: 500;
-  padding: 12px 8px;
-  color: var(--font-color);
-  text-decoration: none;
+    background-color: var(--color-button);
+    border-radius: 1rem;
+    font-weight: 500;
+    padding: 12px 8px;
+    color: var(--font-color);
+    text-decoration: none;
+  }
+  .link-button:hover {
+    background-color: var(--backround-color);
+    text-decoration: underline;
+  }
+.contact {
+  background-color: var(--font-color);
+  color: var(--backround-color);
+  padding: 2rem;
 }
-.link-button:hover {
-  background-color: var(--backround-color);
-  text-decoration: underline;
-}
-.contact{
-    background-color: var(--font-color);
-    color: var(--backround-color);
-    padding: 2rem;
-}
+@media (max-width: 768px) {
+    .hello-world {
+      grid-template-columns: 1fr;
+    }
+  }
