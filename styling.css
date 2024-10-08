@@ -78,6 +78,7 @@ main {
   list-style: none;
   margin: 20px;
   padding: 10px;
+  border-radius: 1rem;
   background-color: var(--color-button);
 }
 .accordion li label {
@@ -112,10 +113,18 @@ input[type="radio"]:checked + label::before {
     background-color: var(--backround-color);
     text-decoration: underline;
   }
-.contact {
-  background-color: var(--font-color);
-  color: var(--backround-color);
-  padding: 2rem;
+.about-me {
+    background-color: var(--font-color);
+    color: var(--backround-color);
+    padding: 2rem;
+}
+.about-me img{
+    max-width: 1000px;
+    height: auto;
+    width: 100%;
+}
+footer{
+   text-align: center;
 }
 @media (max-width: 768px) {
     .hello-world {
