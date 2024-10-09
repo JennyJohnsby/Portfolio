@@ -149,10 +149,12 @@ input[type="radio"]:checked + label::before {
   max-width: 1000px;
   height: auto;
   width: 100%;
+  border-radius: 1rem;
 }
 
 footer {
   text-align: center;
+  font-weight: 500;
 }
 
 @media (max-width: 1200px) {
