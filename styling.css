@@ -4,7 +4,6 @@
   --second-font-color: #652922;
   --color-button: #c8e1ff;
 }
-
 body {
   background-color: var(--backround-color);
   color: var(--font-color);
@@ -12,25 +11,21 @@ body {
   margin: 0;
   font-size: 1.5rem;
 }
-
 main {
   text-align: center;
   font-style: normal;
   font-weight: 300;
 }
-
 .header-container {
   position: relative;
   text-align: center;
 }
-
 .header-img {
   width: 100%;
-  height: 300px;
+  height: 600px;
   object-fit: cover;
   display: block;
 }
-
 .centered {
   position: absolute;
   top: 50%;
@@ -41,7 +36,6 @@ main {
   font-weight: 500;
   text-align: center;
 }
-
 .top-left,
 .top-right {
   position: absolute;
@@ -49,15 +43,12 @@ main {
   font-size: 2.5rem;
   font-weight: 500;
 }
-
 .top-left {
   left: 2rem;
 }
-
 .top-right {
   right: 2rem;
 }
-
 .hello-world {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -65,34 +56,30 @@ main {
   gap: 5rem;
   background-color: var(--font-color);
   color: var(--backround-color);
-  padding: 2rem;
+  padding: 3rem;
 }
-
 .hello-world img {
-  max-width: 100%;
+  max-width: 600px;
+  width: 100%;
   height: auto;
+  border-radius: 30%;
 }
-
 .work-intro {
-  padding: 2rem;
+  padding: 3rem;
 }
-
 .accordion {
-  padding: 2rem;
+  padding: 3rem;
   align-self: center;
 }
-
 .accordion .content img {
   max-width: 900px;
   height: auto;
 }
-
 .accordion .content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s, padding 0.5s;
-}
-
+} 
 .accordion li {
   list-style: none;
   margin: 20px;
@@ -155,6 +142,7 @@ input[type="radio"]:checked + label::before {
 footer {
   text-align: center;
   font-weight: 500;
+  padding: 3rem;
 }
 
 @media (max-width: 1200px) {
@@ -232,6 +220,10 @@ footer {
 }
 
 @media (max-width: 576px) {
+ body{
+  font-size: 1rem;
+ }
+
   .top-left,
   .top-right,
   .centered {
