@@ -1,28 +1,73 @@
-💼 Personal Portfolio
-Welcome to my personal portfolio website! This project showcases my journey as a web developer, highlighting my skills, projects, and experience. The portfolio is designed to be a professional and clean web presence to display my work and allow potential clients or employers to get in touch. This is a project still under work.
+# React + TypeScript + Vite
 
-🚀 Overview
-This portfolio website is a reflection of my skills in front-end development, web design, and user experience. It is fully responsive, built to function across a variety of devices and screen sizes. The main goal of this portfolio is to present my projects, technical skills, and contact details in a clear and engaging way.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Core Sections
-Projects: A gallery of selected projects that demonstrate my skills and creativity.
-About Me: A brief introduction to who I am, my background, and my journey as a developer.
-Contact: A simple contact form for visitors to reach out to me.
+Currently, two official plugins are available:
 
-🔧 Usage
-Explore Projects: Navigate to the Projects section to view detailed project overviews and access live demos or code repositories.
-Learn About Me: The About Me section introduces my background, interests, and career goals.
-Contact: Use the Contact Form to send me a message directly from the website.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-🛠️ Future Improvements
-Dark Mode: Implement a dark mode toggle for better accessibility and user experience.
-Blog Section: Plan to add a personal blog to share articles, tutorials, and updates on my development journey.
-Animations: Adding smooth transitions and animations to enhance interactivity.
+## React Compiler
 
-🤝 Contributions
-Contributions, issues, and feature requests are welcome! Feel free to fork the repository and submit a pull request, or raise an issue if you find bugs or have suggestions.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-📢 Acknowledgments
-Thanks to Noroff for providing support and education that helped shape this portfolio.
-Design Inspiration from various modern web design portfolios.
-Special thanks to my peers for feedback and motivation throughout the development process.
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```

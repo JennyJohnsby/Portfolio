@@ -1,133 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Jenny's Portfolio" />
-    <title>Jenny's Portfolio</title>
-    <link rel="stylesheet" href="/styling/styling.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="./assets/favicon-32x32.png" />
+    <title>portiolio</title>
   </head>
-
   <body>
-    <header>
-      <div class="header-container">
-        <img
-          class="header-img"
-          src="./assets/received_4022412021129237.jpeg"
-          alt="Portrait of Jenny in the Arctic nature"
-        />
-        <div class="top-left">JENNY SAMULINE</div>
-        <div class="top-right">KVALHEIM JOHNSBY</div>
-        <div class="centered">FRONT-END DEVELOPER</div>
-      </div>
-    </header>
-
-    <main>
-      <section class="hello-world">
-        <div class="text">
-          <h1>Hello World!</h1>
-          <p>
-            I'm a front-end developer living in the unique and breathtaking town of Longyearbyen.
-            When I'm not coding, you'll likely find me outdoors, exploring the stunning Arctic
-            landscapes that fuel my passion for adventure. I love blending creativity with
-            technology, crafting engaging and visually captivating web experiences. Feel free to
-            explore my work, and don't hesitate to get in touch!
-          </p>
-        </div>
-        <div>
-          <img
-            class="image"
-            src="./assets/Messenger_creation_6353bf9d-ae42-4616-b761-09af686855ab.jpeg"
-            alt="Jenny hiking on a mountain"
-          />
-        </div>
-      </section>
-
-      <section class="work-intro">
-        <h2>WORK</h2>
-        <p>
-          Welcome to my portfolio! Here you'll find web projects demonstrating my journey as a
-          front-end developer, combining HTML, CSS, and JavaScript to create responsive,
-          accessible, and engaging websites. Each project reflects my dedication to user
-          experience and clean design. Explore how I’ve tackled challenges through code.
-        </p>
-      </section>
-
-      <ul class="accordion">
-        <li>
-          <input type="radio" name="accordion" id="first" checked />
-          <label for="first">PROJECT EXAM 1 (2024) – ARCTIC HUSKY SVALBARD</label>
-          <div class="content">
-            <img src="./assets/Skjermbilde 2024-10-07 202846.png" alt="Screenshot of Arctic Husky project" />
-            <p>
-              For my FED1 exam, I built a responsive blog platform for a fictional husky adventure
-              company. Using only HTML, CSS, and JavaScript, I created a dynamic layout with admin
-              features for managing posts. This project brought all my front-end skills to life.
-            </p>
-            <a href="https://jenny-exam-pe1.netlify.app/home/" class="link-button">
-              Click here to explore my project!
-            </a>
-          </div>
-        </li>
-
-        <li>
-          <input type="radio" name="accordion" id="second" />
-          <label for="second">SEMESTER PROJECT 1 (2024) – SPITSBERGEN SCIENCE MUSEUM</label>
-          <div class="content">
-            <img src="./assets/Skjermbilde 2024-10-07 203152.png" alt="Screenshot of museum website" />
-            <p>
-              I designed a responsive site for a fictional museum targeting children and families.
-              The site includes essential pages, accessibility features, and a colorful but
-              professional aesthetic—coded using semantic HTML and DRY CSS without frameworks.
-            </p>
-            <a href="https://semester-project-jenjoh.netlify.app/" class="link-button">
-              Click here to explore my project!
-            </a>
-          </div>
-        </li>
-
-        <li>
-          <input type="radio" name="accordion" id="third" />
-          <label for="third">CROSS COURSE PROJECT (2024) – RAINY DAYS</label>
-          <div class="content">
-            <img src="./assets/Skjermbilde 2024-10-07 203436.png" alt="Screenshot of Rainy Days webshop" />
-            <p>
-              This webshop project showcases modern, responsive design with product listings,
-              filters, and a working cart built with vanilla JavaScript. Accessibility and
-              performance were key goals, along with a user-friendly shopping experience.
-            </p>
-            <a href="https://cross-cours-jenjoh.netlify.app/" class="link-button">
-              Click here to explore my project!
-            </a>
-          </div>
-        </li>
-      </ul>
-
-      <section class="about-me">
-        <h2>GET TO KNOW ME BETTER!</h2>
-        <p>
-          I’m a developer passionate about coding, creativity, and continuous learning. My tech
-          journey is rooted in artistic interests like books, painting, and music. Today, I blend
-          those roots with front-end development to create meaningful and beautiful digital
-          experiences. I aim to build websites that are not only functional but also visually
-          engaging, using my creative background to approach code with a unique perspective.
-        </p>
-        <img src="./assets/IMG_0767.jpeg" alt="Jenny sitting on a mountain" />
-      </section>
-    </main>
-
-    <footer>
-      <h2>Let’s Connect!</h2>
-      <p>
-        I’m always open to new opportunities, collaborations, or simply chatting about web
-        development and creative projects. Have something in mind? Want to share ideas? Feel free to
-        reach out:<br />
-        <strong>Email:</strong> jjohnsby.dev@gmail.com
-      </p>
-    </footer>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
