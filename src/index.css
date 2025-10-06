@@ -1,2 +1,11 @@
 @import "tailwindcss";
 
+
+
+:root {
+  --dark-green: #1D1E18;
+  --light-green: #6B8F71;
+  --mint-green: #AAD2BA ;
+  --sage-green: #D4CB92;
+  --beige: #F1DABF;
+}
