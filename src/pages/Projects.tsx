@@ -1,19 +1,14 @@
 import { motion } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
 
-import bidForForestImg from "../assets/bff-logo.svg";
-import petagramImg from "../assets/petagram-logo.svg";
-import mysticMarketImg from "../assets/mm-logo.svg";
-import articHuskyImg from "../assets/aht-logo.svg";
-import holidazeImg from "../assets/holidaze-logo.svg";
-import rainyDaysImg from "../assets/rainydays-logo.svg";
+import placeholderImg from "../assets/placeholder.jpg";
 
 const projects = [
   {
     title: "Holidaze",
     description:
       "A booking app for browsing and reserving venues, with admin tools for managing listings.",
-    image: holidazeImg,
+    image: placeholderImg,
     link: "https://jenjoh.netlify.app/",
     techStack: ["HTML", "CSS", "API", "Vite", "Tailwind", "JavaScript", "MPA"],
   },
@@ -21,7 +16,7 @@ const projects = [
     title: "Bid For Forest",
     description:
       "An auction platform where users list and bid on items using credits. Built with TypeScript, TailwindCSS, and the Noroff Auction API.",
-    image: bidForForestImg,
+    image: placeholderImg,
     link: "https://bidforforest.netlify.app/",
     techStack: [
       "HTML",
@@ -38,7 +33,7 @@ const projects = [
     title: "Arctic Husky Travelers",
     description:
       "A blog application that fetches posts from an API, featuring a carousel and individual article pages.",
-    image: articHuskyImg,
+    image: placeholderImg,
     link: "https://jenny-exam-pe1.netlify.app/",
     techStack: ["HTML", "CSS", "API", "JavaScript", "MPA"],
   },
@@ -46,7 +41,7 @@ const projects = [
     title: "Rainy Days",
     description:
       "An online store that fetches products from an API with filtering, shopping basket, and dynamic functionality.",
-    image: rainyDaysImg,
+    image: placeholderImg,
     link: "https://cross-cours-jenjoh.netlify.app/",
     techStack: ["HTML", "CSS", "API", "JavaScript", "MPA"],
   },
@@ -54,7 +49,7 @@ const projects = [
     title: "Mystic Market",
     description:
       "An e-commerce app built with React and TypeScript. Includes search, sorting, cart with checkout, and contact form validation.",
-    image: mysticMarketImg,
+    image: placeholderImg,
     link: "https://jsf-m9htew6n1-jennyjohnsbys-projects.vercel.app/",
     techStack: [
       "React",
@@ -70,7 +65,7 @@ const projects = [
     title: "Petagram",
     description:
       "A social media app with CRUD posts, comments, emoji reactions, and user following features.",
-    image: petagramImg,
+    image: placeholderImg,
     link: "https://petagramtailwindcss.netlify.app/",
     techStack: ["HTML", "CSS", "API", "Vite", "Tailwind", "JavaScript", "MPA"],
   },
@@ -92,7 +87,7 @@ const item = {
 export default function Projects() {
   return (
     <motion.main
-      className="min-h-screen px-6 py-12 bg-[var(--off-white)]"
+      className="min-h-screen px-6 py-12 bg-[var(--bg)]"
       initial="hidden"
       animate="show"
       variants={container}
@@ -100,14 +95,14 @@ export default function Projects() {
       <motion.h1
         variants={item}
         id="projects-heading"
-        className="text-3xl md:text-5xl font-bold text-center text-[var(--dark-purple)] mb-6"
+        className="text-3xl md:text-5xl font-bold text-center text-[var(--text)] mb-6"
       >
         My Projects
       </motion.h1>
 
       <motion.p
         variants={item}
-        className="text-center text-[var(--eggplant)] max-w-2xl mx-auto mb-12 text-base md:text-lg leading-relaxed"
+        className="text-center text-[var(--nav-text)] max-w-2xl mx-auto mb-12 text-base md:text-lg leading-relaxed"
       >
         Each project has helped me grow as a developer, from learning responsive
         layouts to mastering APIs, TypeScript, and modern frameworks. These

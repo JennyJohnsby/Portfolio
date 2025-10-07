@@ -16,24 +16,24 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-[var(--dark-purple)] text-[var(--light-pink)] shadow-md px-6 py-4 relative">
+    <nav className="bg-[var(--nav-bg)] text-[var(--nav-text)] shadow-md px-6 py-4 relative transition-colors duration-500">
       <div className="flex justify-between items-center">
         <Link
           to="/"
-          className="text-3xl sm:text-4xl font-bold hover:text-[var(--pink)] transition"
+          className="text-3xl sm:text-4xl font-bold hover:text-[var(--accent)] transition"
         >
           Jenny Johnsby · Developer
         </Link>
 
-        <div className="hidden sm:flex space-x-8 text-lg tracking-wide">
+        <div className="hidden sm:flex items-center space-x-6 text-lg tracking-wide">
           {links.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              className={`transition ${
+              className={`px-3 py-1 rounded-md transition ${
                 location.pathname === link.to
-                  ? "text-[var(--pink)] font-semibold"
-                  : "hover:text-[var(--pink)]"
+                  ? "text-[var(--accent)] font-semibold"
+                  : "hover:text-[var(--accent)]"
               }`}
             >
               {link.label}
@@ -51,16 +51,16 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="sm:hidden flex flex-col space-y-4 mt-4 text-lg tracking-wide bg-[var(--dark-purple)] rounded-lg p-4 shadow-md animate-fade-in">
+        <div className="sm:hidden flex flex-col space-y-3 mt-4 text-lg tracking-wide bg-[var(--nav-bg)] text-[var(--nav-text)] rounded-lg p-4 shadow-md animate-fade-in transition-colors duration-500">
           {links.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               onClick={() => setIsOpen(false)}
-              className={`transition ${
+              className={`px-3 py-2 rounded-md transition ${
                 location.pathname === link.to
-                  ? "text-[var(--pink)] font-semibold"
-                  : "hover:text-[var(--pink)]"
+                  ? "bg-[var(--accent)] text-white font-semibold"
+                  : "hover:text-[var(--accent)]"
               }`}
             >
               {link.label}

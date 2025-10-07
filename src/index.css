@@ -1,11 +1,113 @@
 @import "tailwindcss";
 
-
-
 :root {
-  --off-white: #ffdae862;
-  --light-pink: #f7d1df;
-  --pink: #963b70;
-  --eggplant: #814665;
-  --dark-purple: #1a0b12;
+  --bg: #111827;
+  --text: #f9fafb;
+  --accent: #fb923c;
+  --accent-hover: #ea580c;
+  --accent-light: #fdba74;
+  --border: #64748b;
+  --nav-bg: #1f2937;
+  --nav-text: #f9fafb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a:not(.btn) {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+a:not(.btn):hover {
+  color: var(--accent-light);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-in-out;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out;
+}
+
+@keyframes bounce-subtle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.hover-bounce:hover {
+  animation: bounce-subtle 0.4s ease;
+}
+
+/* 🔘 Buttons */
+.btn {
+  @apply rounded-xl font-medium transition;
+  background-color: var(--accent);
+  color: white;
+}
+.btn:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-outline {
+  @apply rounded-xl font-medium border transition;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.btn-outline:hover {
+  background-color: var(--accent);
+  color: white;
 }
