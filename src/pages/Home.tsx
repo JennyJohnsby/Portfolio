@@ -92,7 +92,6 @@ export default function Home() {
       animate="show"
       variants={container}
     >
-      {/* Hero Section */}
       <motion.h1
         variants={item}
         className="text-[clamp(2rem,5vw,3.5rem)] font-bold mb-4"
@@ -116,7 +115,6 @@ export default function Home() {
         Frontend Developer | Building modern, responsive, and creative web experiences.
       </motion.p>
 
-      {/* Featured Projects */}
       <section className="w-full max-w-7xl text-center py-16 border-t border-[var(--border)]/30">
         <h2 className="text-2xl font-bold text-[var(--accent)] mb-8 text-center">
           Featured Projects
@@ -140,7 +138,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <motion.section
         variants={item}
         className="w-full max-w-4xl text-center py-16 border-t border-[var(--border)]/30"
