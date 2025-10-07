@@ -23,10 +23,11 @@ body {
 }
 
 body {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "DM Serif Text", serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  letter-spacing: 0.07em; 
   -webkit-font-smoothing: antialiased;
 }
 
@@ -97,6 +98,7 @@ html {
   background-color: var(--accent);
   color: white;
 }
+
 .btn:hover {
   background-color: var(--accent-hover);
 }
@@ -106,6 +108,7 @@ html {
   border-color: var(--accent);
   color: var(--accent);
 }
+
 .btn-outline:hover {
   background-color: var(--accent);
   color: white;
