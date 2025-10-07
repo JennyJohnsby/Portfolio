@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
 
-import placeholderImg from "../assets/placeholder.jpg";
+import placeholderImg from "../assets/placeholder.jpg"; // ✅ single placeholder for all
 
 const projects = [
   {

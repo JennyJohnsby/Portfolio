@@ -35,7 +35,7 @@ export default function ProjectCard({
     <motion.div
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="bg-[var(--nav-bg)] text-[var(--nav-text)] rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg max-w-lg border border-[var(--border)]/30"
+      className="flex flex-col bg-[var(--nav-bg)] text-[var(--nav-text)] rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg max-w-lg border border-[var(--border)]/30 h-full"
     >
       <a href={link} target="_blank" rel="noopener noreferrer">
         <img
@@ -46,10 +46,8 @@ export default function ProjectCard({
         />
       </a>
 
-      <div className="p-6 text-center">
-        <h2 className="text-lg font-bold text-[var(--nav-text)] mb-2">
-          {title}
-        </h2>
+      <div className="flex flex-col flex-grow p-6 text-center">
+        <h2 className="text-lg font-bold mb-2">{title}</h2>
         <p className="text-sm opacity-80 mb-4">{description}</p>
 
         {techStack.length > 0 && (
@@ -64,8 +62,7 @@ export default function ProjectCard({
             ))}
           </div>
         )}
-
-        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mt-6">
+        <div className="mt-auto flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
           <a
             href={link}
             target="_blank"

@@ -38,7 +38,7 @@ export default function Footer() {
 
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="btn-outline block mx-auto mt-6 text-xs"
+        className="btn-outline block mx-auto mt-6 p-2"
       >
         Back to top ↑
       </button>
