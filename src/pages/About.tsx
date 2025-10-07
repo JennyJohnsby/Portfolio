@@ -23,47 +23,49 @@ export default function About() {
       animate="show"
     >
       <motion.div
-        className="bg-[var(--nav-bg)] shadow-lg rounded-2xl p-8 md:p-12 max-w-3xl w-full text-center border border-[var(--border)]"
+        className="bg-[var(--nav-bg)] shadow-lg rounded-2xl overflow-hidden max-w-5xl w-full border border-[var(--border)]"
         variants={item}
       >
-        <motion.img
-          src={portrett}
-          alt="Jenny Johnsby"
-          className="w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full mx-auto mb-6 shadow-md object-cover border-2 border-[var(--accent)]"
-          variants={item}
-        />
-
-        <motion.h1
-          className="text-3xl md:text-5xl font-bold text-[var(--accent)] mb-6"
-          variants={item}
-        >
-          About Me
-        </motion.h1>
-
-        <motion.p
-          className="text-base md:text-lg text-[var(--text)] leading-relaxed mb-8"
-          variants={item}
-        >
-          I’m Jenny, a frontend developer passionate about building clean,
-          responsive, and creative web apps. Skilled in React, Tailwind, and
-          modern web tools. I enjoy crafting user-friendly experiences and
-          continuously exploring new technologies to improve my craft.
-        </motion.p>
-
         <motion.div
-          className="flex flex-wrap justify-center gap-3"
+          className="flex flex-col md:flex-row items-center justify-center md:items-center gap-10 p-8 md:p-12 text-center md:text-left min-h-[200px] md:min-h-[400px]"
           variants={item}
         >
-          {["React", "Tailwind", "TypeScript", "JavaScript", "APIs"].map(
-            (skill) => (
-              <span
-                key={skill}
-                className="px-4 py-2 rounded-full text-sm font-medium shadow-sm bg-[var(--accent)] text-white hover:bg-[var(--accent-hover)] transition"
-              >
-                {skill}
-              </span>
-            )
-          )}
+          <motion.div
+            className="rounded-full overflow-hidden border-4 border-[var(--accent)] shadow-lg"
+            variants={item}
+          >
+            <motion.img
+              src={portrett}
+              alt="Jenny Johnsby"
+              className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover transition-transform duration-500 scale-150 hover:scale-100"
+            />
+          </motion.div>
+
+          <motion.div className="flex-1" variants={item}>
+            <motion.h1
+              className="text-3xl md:text-5xl font-bold text-[var(--accent)] mb-6"
+              variants={item}
+            >
+              About Me
+            </motion.h1>
+
+            <motion.p
+              className="text-base md:text-lg text-[var(--text)] leading-relaxed"
+              variants={item}
+            >
+              I’m a frontend developer with a passion for creating modern,
+              responsive, and user-friendly web applications. With a solid
+              foundation in web technologies and a creative mindset, I enjoy
+              transforming ideas into clean and functional digital experiences.
+              <br />
+              <br />
+              My background includes a two-year education in frontend
+              development at Noroff, where I gained strong skills in React,
+              Tailwind, TypeScript, and other modern tools. I’m always eager to
+              learn new technologies and continuously improve both my technical
+              abilities and design sense to deliver high-quality solutions.
+            </motion.p>
+          </motion.div>
         </motion.div>
       </motion.div>
     </motion.main>
