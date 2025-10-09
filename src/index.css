@@ -94,7 +94,7 @@ html {
 }
 
 .btn {
-  @apply rounded-xl font-medium transition;
+  @apply rounded-xl transition;
   background-color: var(--accent);
   color: white;
 }

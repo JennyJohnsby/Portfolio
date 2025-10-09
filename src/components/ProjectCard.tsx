@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FaShareAlt, FaExternalLinkAlt } from "react-icons/fa";
+import { FaShareAlt, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import placeholderImg from "../assets/placeholder.jpg";
 
 interface ProjectCardProps {
@@ -8,6 +8,7 @@ interface ProjectCardProps {
   description: string;
   image?: string;
   link: string;
+  github?: string;
   techStack?: string[];
 }
 
@@ -16,6 +17,7 @@ export default function ProjectCard({
   description,
   image,
   link,
+  github,
   techStack = [],
 }: ProjectCardProps) {
   const [copied, setCopied] = useState(false);
@@ -35,14 +37,14 @@ export default function ProjectCard({
     <motion.div
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="flex flex-col bg-[var(--nav-bg)] text-[var(--nav-text)] rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg max-w-lg border border-[var(--border)]/30 h-full"
+      className="flex flex-col bg-[var(--nav-bg)] text-[var(--nav-text)] rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg border border-[var(--border)]/30 h-full"
     >
       <a href={link} target="_blank" rel="noopener noreferrer">
         <img
           src={imgSrc}
           onError={() => setImgSrc(placeholderImg)}
           alt={title}
-          className="w-full h-52 object-fit bg-[var(--bg)]"
+          className="w-full h-80 object-cover bg-[var(--bg)]"
         />
       </a>
 
@@ -62,22 +64,35 @@ export default function ProjectCard({
             ))}
           </div>
         )}
+
         <div className="mt-auto flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-2.5"
+            className="btn flex items-center justify-center gap-2 w-full sm:w-auto px-3 py-1.5 rounded-lg shadow-md bg-[var(--accent)] text-white hover:bg-[var(--accent-light)] transition"
           >
             <span>View Project</span>
-            <FaExternalLinkAlt className="text-sm" />
+            <FaExternalLinkAlt className="text-base" />
           </a>
+
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full sm:w-auto px-3 py-1.5 rounded-lg shadow-md border border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white transition"
+            >
+              <FaGithub className="text-lg" />
+              <span>GitHub</span>
+            </a>
+          )}
 
           <button
             onClick={handleShare}
-            className="btn-outline flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-2.5"
+            className="flex items-center justify-center w-full sm:w-auto gap-2 px-3 py-1.5 rounded-lg shadow-md border border-[var(--border)] text-[var(--nav-text)] hover:bg-[var(--accent)] hover:text-white transition"
           >
-            <FaShareAlt />
+            <FaShareAlt className="text-base" />
             {copied ? "Copied!" : "Share"}
           </button>
         </div>

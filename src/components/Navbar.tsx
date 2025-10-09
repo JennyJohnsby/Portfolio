@@ -22,7 +22,6 @@ export default function Navbar() {
       className="sticky top-0 z-50 bg-[var(--nav-bg)] text-[var(--nav-text)] shadow-md px-6 py-4 transition-colors duration-500"
     >
       <div className="flex justify-between items-center">
-        {/* Brand */}
         <Link
           to="/"
           className="text-2xl sm:text-3xl font-bold hover:text-[var(--accent)] transition"
@@ -30,7 +29,6 @@ export default function Navbar() {
           Jenny Johnsby <span className="text-[var(--accent)] font-normal">· Developer</span>
         </Link>
 
-        {/* Desktop Nav */}
         <div className="hidden sm:flex items-center space-x-6 text-lg tracking-wide">
           {links.map((link) => (
             <Link
@@ -48,7 +46,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile Toggle Button */}
         <button
           className="sm:hidden text-2xl focus:outline-none"
           onClick={toggleMenu}
@@ -58,7 +55,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu with Framer Motion */}
       <AnimatePresence>
         {isOpen && (
           <motion.div

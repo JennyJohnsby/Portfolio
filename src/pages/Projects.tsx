@@ -1,23 +1,30 @@
 import { motion } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
 
-import placeholderImg from "../assets/placeholder.jpg"; // ✅ single placeholder for all
+import ahtImg from "../assets/aht.png";
+import bffImg from "../assets/bff.png";
+import holidazeImg from "../assets/holidaze.png";
+import mmImg from "../assets/mm.png";
+import petagramImg from "../assets/petagram.png";
+import rainydaysImg from "../assets/rainydays.png";
 
 const projects = [
   {
     title: "Holidaze",
     description:
       "A booking app for browsing and reserving venues, with admin tools for managing listings.",
-    image: placeholderImg,
+    image: holidazeImg,
     link: "https://jenjoh.netlify.app/",
+    github: "https://github.com/JennyJohnsby/holidaze",
     techStack: ["HTML", "CSS", "API", "Vite", "Tailwind", "JavaScript", "MPA"],
   },
   {
     title: "Bid For Forest",
     description:
       "An auction platform where users list and bid on items using credits. Built with TypeScript, TailwindCSS, and the Noroff Auction API.",
-    image: placeholderImg,
+    image: bffImg,
     link: "https://bidforforest.netlify.app/",
+    github: "https://github.com/JennyJohnsby/jenny-sp2",
     techStack: [
       "HTML",
       "CSS",
@@ -33,24 +40,27 @@ const projects = [
     title: "Arctic Husky Travelers",
     description:
       "A blog application that fetches posts from an API, featuring a carousel and individual article pages.",
-    image: placeholderImg,
+    image: ahtImg,
     link: "https://jenny-exam-pe1.netlify.app/",
+    github: "https://github.com/NoroffFEU/FED1-PE1-JennyJohnsby",
     techStack: ["HTML", "CSS", "API", "JavaScript", "MPA"],
   },
   {
     title: "Rainy Days",
     description:
       "An online store that fetches products from an API with filtering, shopping basket, and dynamic functionality.",
-    image: placeholderImg,
+    image: rainydaysImg,
     link: "https://cross-cours-jenjoh.netlify.app/",
+    github: "https://github.com/NoroffFEU/RainyDays-assignment-JennyJohnsby",
     techStack: ["HTML", "CSS", "API", "JavaScript", "MPA"],
   },
   {
     title: "Mystic Market",
     description:
       "An e-commerce app built with React and TypeScript. Includes search, sorting, cart with checkout, and contact form validation.",
-    image: placeholderImg,
+    image: mmImg,
     link: "https://jsf-m9htew6n1-jennyjohnsbys-projects.vercel.app/",
+    github: "https://github.com/JennyJohnsby/jsf-mm",
     techStack: [
       "React",
       "TypeScript",
@@ -65,8 +75,9 @@ const projects = [
     title: "Petagram",
     description:
       "A social media app with CRUD posts, comments, emoji reactions, and user following features.",
-    image: placeholderImg,
+    image: petagramImg,
     link: "https://petagramtailwindcss.netlify.app/",
+    github: "https://github.com/NoroffFEU/js2-ca-tara-and-jenny",
     techStack: ["HTML", "CSS", "API", "Vite", "Tailwind", "JavaScript", "MPA"],
   },
 ];
@@ -114,7 +125,7 @@ export default function Projects() {
 
       <motion.div
         variants={container}
-        className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-items-center"
+        className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2 justify-items-center"
       >
         {projects.map((project, index) => (
           <motion.div key={index} variants={item}>

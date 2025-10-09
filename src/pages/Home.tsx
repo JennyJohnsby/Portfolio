@@ -1,23 +1,28 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";
-import placeholderImg from "../assets/placeholder.jpg";
+
+import ahtImg from "../assets/aht.png";
+import bffImg from "../assets/bff.png";
+import holidazeImg from "../assets/holidaze.png";
 
 const projects = [
   {
     title: "Holidaze",
     description:
       "A booking app for browsing and reserving venues, with admin tools for managing listings.",
-    image: placeholderImg,
+    image: holidazeImg,
     link: "https://jenjoh.netlify.app/",
+    github: "https://github.com/JennyJohnsby/holidaze",
     techStack: ["HTML", "CSS", "API", "Vite", "Tailwind", "JavaScript", "MPA"],
   },
   {
     title: "Bid For Forest",
     description:
       "An auction platform where users list and bid on items using credits. Built with TypeScript, TailwindCSS, and the Noroff Auction API.",
-    image: placeholderImg,
+    image: bffImg,
     link: "https://bidforforest.netlify.app/",
+    github: "https://github.com/JennyJohnsby/jenny-sp2",
     techStack: [
       "HTML",
       "CSS",
@@ -33,41 +38,10 @@ const projects = [
     title: "Arctic Husky Travelers",
     description:
       "A blog application that fetches posts from an API, featuring a carousel and individual article pages.",
-    image: placeholderImg,
+    image: ahtImg,
     link: "https://jenny-exam-pe1.netlify.app/",
+    github: "https://github.com/NoroffFEU/FED1-PE1-JennyJohnsby",
     techStack: ["HTML", "CSS", "API", "JavaScript", "MPA"],
-  },
-  {
-    title: "Rainy Days",
-    description:
-      "An online store that fetches products from an API with filtering, shopping basket, and dynamic functionality.",
-    image: placeholderImg,
-    link: "https://cross-cours-jenjoh.netlify.app/",
-    techStack: ["HTML", "CSS", "API", "JavaScript", "MPA"],
-  },
-  {
-    title: "Mystic Market",
-    description:
-      "An e-commerce app built with React and TypeScript. Includes search, sorting, cart with checkout, and contact form validation.",
-    image: placeholderImg,
-    link: "https://jsf-m9htew6n1-jennyjohnsbys-projects.vercel.app/",
-    techStack: [
-      "React",
-      "TypeScript",
-      "Tailwind",
-      "API",
-      "Vite",
-      "CSS",
-      "JavaScript",
-    ],
-  },
-  {
-    title: "Petagram",
-    description:
-      "A social media app with CRUD posts, comments, emoji reactions, and user following features.",
-    image: placeholderImg,
-    link: "https://petagramtailwindcss.netlify.app/",
-    techStack: ["HTML", "CSS", "API", "Vite", "Tailwind", "JavaScript", "MPA"],
   },
 ];
 
@@ -112,20 +86,17 @@ export default function Home() {
         variants={item}
         className="text-base md:text-lg leading-relaxed opacity-80 mb-10"
       >
-        Frontend Developer | Building modern, responsive, and creative web experiences.
+        Frontend Developer | Building modern, responsive, and creative web
+        experiences.
       </motion.p>
 
       <section className="w-full max-w-7xl text-center py-16 border-t border-[var(--border)]/30">
         <h2 className="text-2xl font-bold text-[var(--accent)] mb-8 text-center">
           Featured Projects
         </h2>
-        <div className="grid gap-6 md:grid-cols-3">
-          {projects.slice(0, 3).map((project, index) => (
-            <motion.div
-              key={index}
-              variants={item}
-              className="w-full max-w-sm md:max-w-md"
-            >
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
+          {projects.slice(0, 2).map((project, index) => (
+            <motion.div key={index} variants={item} className="w-full">
               <ProjectCard {...project} />
             </motion.div>
           ))}
