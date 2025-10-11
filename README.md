@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+# 🌟 Jenny Johnsby — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio!  
+This project showcases my frontend development work — built with **React**, **Vite**, **TypeScript**, and **Tailwind CSS**, and animated with **Framer Motion**.  
+It highlights my featured projects, contact information, and design philosophy in a clean and responsive layout.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## React Compiler
+- ⚛️ **React + TypeScript** – fast, type-safe, component-driven development  
+- 🎨 **Tailwind CSS** – utility-first styling for a modern, responsive UI  
+- 🎞 **Framer Motion** – smooth page and element animations  
+- 🌐 **React Router** – for seamless navigation  
+- 🧠 **Vite** – ultra-fast bundler and dev environment  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Fully responsive design for desktop, tablet, and mobile  
+- Animated transitions and hover effects  
+- Project showcase grid with live demo links  
+- Simple and elegant contact page with social links  
+- Smooth scrolling and subtle animations for an engaging UX  
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📂 Project Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+portfolio/
+│
+├── src/
+│ ├── assets/ # Images and icons
+│ ├── components/ # Reusable components (Navbar, Footer, etc.)
+│ ├── pages/ # Page components (Home, About, Projects, Contact)
+│ ├── App.tsx # Main application structure
+│ ├── index.css # Global styles (Tailwind + custom variables)
+│ └── main.tsx # Entry point
+│
+├── public/
+│ ├── favicon.ico # Website icon
+│ └── index.html # HTML entry file
+│
+├── tailwind.config.js # Tailwind configuration
+├── tsconfig.json # TypeScript configuration
+├── vite.config.ts # Vite settings
+└── package.json # Dependencies and scripts
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🖋️ Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/JennyJohnsby/portfolio.git
+cd portfolio
+npm install
+npm run dev
+http://localhost:5173
+npm run build
+
+📨 Contact
+
+If you'd like to get in touch, you can reach me via:
+📧 jjohnsby.dev@gmail.com
+
+🧡 Acknowledgements
+
+Thanks to:
+
+Framer Motion for animation magic
+
+Tailwind CSS for styling simplicity
+
+Vite + React for developer happiness
+
+Designed & Built with care by Jenny Johnsby 🪄
