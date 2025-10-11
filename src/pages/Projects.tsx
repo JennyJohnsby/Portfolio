@@ -125,7 +125,7 @@ export default function Projects() {
 
       <motion.div
         variants={container}
-        className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2 justify-items-center"
+        className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-items-center"
       >
         {projects.map((project, index) => (
           <motion.div key={index} variants={item}>

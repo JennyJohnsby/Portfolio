@@ -61,7 +61,7 @@ const item = {
 export default function Home() {
   return (
     <motion.main
-      className="flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center bg-[var(--bg)] text-[var(--text)]"
+      className="flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center bg-[var(--bg)] text-[var(--text)] gap-8"
       initial="hidden"
       animate="show"
       variants={container}
@@ -94,9 +94,14 @@ export default function Home() {
         <h2 className="text-2xl font-bold text-[var(--accent)] mb-8 text-center">
           Featured Projects
         </h2>
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
+
+        <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 justify-items-center">
           {projects.slice(0, 2).map((project, index) => (
-            <motion.div key={index} variants={item} className="w-full">
+            <motion.div
+              key={index}
+              variants={item}
+              className="flex justify-center w-full max-w-[460px]"
+            >
               <ProjectCard {...project} />
             </motion.div>
           ))}

@@ -37,7 +37,7 @@ export default function ProjectCard({
     <motion.div
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="flex flex-col bg-[var(--nav-bg)] text-[var(--nav-text)] rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg border border-[var(--border)]/30 h-full"
+      className="flex flex-col bg-[var(--nav-bg)] text-[var(--nav-text)] rounded-2xl shadow-md overflow-hidden transition hover:shadow-lg border border-[var(--border)]/30 h-full w-200 gap-8"
     >
       <a href={link} target="_blank" rel="noopener noreferrer">
         <img
